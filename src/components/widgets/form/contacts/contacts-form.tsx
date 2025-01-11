@@ -4,6 +4,7 @@ import { IconSelect } from '@/components/widgets/form/contacts/icon-select.tsx'
 import { LinkInput } from '@/components/widgets/form/contacts/link-input.tsx'
 import type { LinkItemData } from '@/components/widgets/widgets-type.d.ts'
 import { createLinkItem } from '@/components/widgets/widgets-util.ts'
+import { LINK_LENGTH_LIMIT } from '@/const/dom.ts'
 import { produce } from 'immer'
 
 interface LinkGroupProps {
@@ -24,7 +25,7 @@ const ContactsForm = ({ data, onChange }: LinkGroupProps) => {
     })
     onChange(nextState)
   }
-  const LINK_LENGTH_LIMIT = 3
+
   const showCreate = data.length < LINK_LENGTH_LIMIT
   const handleCreate = () => {
     onChange([...data, createLinkItem()])

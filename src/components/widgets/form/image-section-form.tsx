@@ -1,7 +1,7 @@
 import { Input } from '@/components/ui/input.tsx'
 import { Slider } from '@/components/ui/slider'
 import type { ImageSectionData } from '@/components/widgets/widgets-type.d.ts'
-import { MAX_IMAGE_SIZE, MIN_IMAGE_SIZE } from '@/const'
+import { MAX_IMAGE_SIZE, MIN_IMAGE_SIZE } from '@/const/dom.ts'
 import type { ChangeEvent } from 'react'
 
 const ImageSectionForm = ({

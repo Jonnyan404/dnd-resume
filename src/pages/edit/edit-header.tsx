@@ -67,9 +67,6 @@ const EditHeader = () => {
     a.download = (getBasename(widgets) || 'resume-config') + '.json'
     a.click()
     URL.revokeObjectURL(url)
-    toast.success('成功导出配置文件', {
-      position: 'top-center',
-    })
   }
 
   const handleExportBase64 = () => {

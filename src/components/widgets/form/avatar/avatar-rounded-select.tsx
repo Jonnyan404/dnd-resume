@@ -13,14 +13,14 @@ const AvatarRoundedSelect: React.FC<AvatarRoundedSelectProps> = ({ url, rounded,
       <button onClick={() => onChange(true)}>
         <img
           src={url}
-          alt="Rounded Avatar"
+          alt="avatar"
           className={clsx('h-8 w-8 rounded-full', rounded && activeCls)}
         />
       </button>
       <button onClick={() => onChange(false)}>
         <img
           src={url}
-          alt="Square Avatar"
+          alt="avatar"
           className={clsx('h-8 w-8', !rounded && activeCls)}
         />
       </button>

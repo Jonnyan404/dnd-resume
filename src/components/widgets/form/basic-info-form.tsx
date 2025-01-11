@@ -3,11 +3,9 @@ import { Slider } from '@/components/ui/slider'
 import { AvatarRoundedSelect } from '@/components/widgets/form/avatar/avatar-rounded-select.tsx'
 import { ContactsForm } from '@/components/widgets/form/contacts/contacts-form.tsx'
 import type { BasicInfoData, LinkItemData } from '@/components/widgets/widgets-type.d.ts'
+import { MAX_AVATAR_SIZE, MIN_AVATAR_SIZE } from '@/const/dom.ts'
 import { produce } from 'immer'
 import type { ChangeEvent } from 'react'
-
-const MIN_AVATAR_SIZE = 48
-const MAX_AVATAR_SIZE = 128
 
 const BasicInfoForm = ({
   data,

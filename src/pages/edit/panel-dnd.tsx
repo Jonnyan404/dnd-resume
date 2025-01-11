@@ -1,4 +1,4 @@
-import { DraggableWidgetNode } from '@/pages/edit/draggable-widget-node.tsx'
+import { DraggableNodeWrapper } from '@/pages/edit/draggable-node-wrapper.tsx'
 import { useWidgetsStore } from '@/store/widgets-store.ts'
 import {
   closestCenter,
@@ -83,7 +83,7 @@ const PanelDnd = () => {
           strategy={verticalListSortingStrategy}
         >
           {widgets.map(item => (
-            <DraggableWidgetNode
+            <DraggableNodeWrapper
               key={item.id}
               item={item}
               isSelected={item.id === selectedId}

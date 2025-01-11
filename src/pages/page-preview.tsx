@@ -6,6 +6,7 @@ import { TitleSection } from '@/components/widgets/node/title-section.tsx'
 import { widgetsSchema } from '@/components/widgets/widgets-schema'
 import type { WidgetNode } from '@/components/widgets/widgets-type.d.ts'
 import { getBasename } from '@/components/widgets/widgets-util.ts'
+import { S_N_PRINT } from '@/const/storage.ts'
 import { decodeFromBase64Url } from '@/lib/utils'
 import { useWidgetsStore } from '@/store/widgets-store.ts'
 import { useEffect } from 'react'
@@ -77,8 +78,8 @@ const PagePreview = () => {
    */
   const navigate = useNavigate()
   useEffect(() => {
-    if (sessionStorage.getItem('PRINT')) {
-      sessionStorage.removeItem('PRINT')
+    if (sessionStorage.getItem(S_N_PRINT)) {
+      sessionStorage.removeItem(S_N_PRINT)
       Promise.resolve().then(() => {
         // print filename
         const originalTitle = document.title

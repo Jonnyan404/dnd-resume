@@ -17,6 +17,7 @@ const BasicInfo = ({ data }: BasicInfoProps) => {
           src={avatarUrl}
           alt="avatar"
           width={avatarSize || 100}
+          height={avatarSize || 100}
           className={clsx('mr-8 sm:mr-16', avatarRound && 'rounded-full')}
           draggable={false}
         />
