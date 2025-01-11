@@ -90,8 +90,7 @@ const EditHeader = () => {
 
   const handleClickPrint = () => {
     sessionStorage.setItem('PRINT', 'true')
-    const base64 = encodeToBase64Url(JSON.stringify(widgets))
-    navigate('/preview?data=' + base64)
+    navigate('/preview')
   }
 
   return (
